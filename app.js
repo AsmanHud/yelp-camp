@@ -24,7 +24,7 @@ const userRoutes = require('./routes/users');
 
 const User = require('./models/user');
 
-const dbUrl = 'mongodb://localhost:27017/yelp-camp';
+const dbUrl = process.env.DB_URL;
 
 const store = MongoStore.create({
     mongoUrl: dbUrl,
